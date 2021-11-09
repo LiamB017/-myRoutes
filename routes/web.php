@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginContoller;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/about', 'App\Http\Controllers\AboutController@about');
+
+
+Route::get('/login', 'App\Http\Controllers\LoginController@login');
+
+
+Route::get('/register', 'App\Http\Controllers\RegisterController@register');
+
+Route::get('/profile', 'App\Http\Controllers\ProfileController@DisplayProfile');
+
+
+
